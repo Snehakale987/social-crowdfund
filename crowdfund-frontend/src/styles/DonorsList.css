@@ -1,0 +1,83 @@
+/* DonorsList Container */
+.donors-list {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+/* DonorsList Title */
+.donors-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #264653;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+/* Donors List Container */
+.donors-list-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual Donor Item */
+.donor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f9f9f9;
+    margin-bottom: 0.75rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.donor-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Donor Info */
+.donor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.donor-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2a9d8f;
+    margin-bottom: 0.25rem;
+}
+
+.donor-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Donor Amount */
+.donor-amount {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e76f51;
+    text-align: right;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .donor-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
+    }
+
+    .donor-amount {
+        margin-top: 0.5rem;
+    }
+}

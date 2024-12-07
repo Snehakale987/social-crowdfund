@@ -1,0 +1,87 @@
+/* General Section Styling */
+.trending {
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.trending h2 {
+    font-size: 2.5rem;
+    color: #264653;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Horizontal Scrollable Carousel */
+.causes-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: hidden; /* Prevent scrolling past boundaries */
+    scroll-behavior: smooth; /* Enables smooth scrolling for container */
+    padding: 1rem 0;
+    max-width: 100%;
+}
+
+/* Cause Card */
+.causes-carousel .cause-card {
+    flex: 0 0 300px; /* All cards have consistent size */
+}
+
+/* Scroll Buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #264653;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 2;
+}
+
+.scroll-button:hover {
+    background: #2a9d8f;
+    transform: scale(1.1);
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:disabled {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Pagination Info */
+.pagination-info {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #264653;
+    font-weight: bold;
+}
+

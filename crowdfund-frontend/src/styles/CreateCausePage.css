@@ -1,0 +1,39 @@
+.create-cause-page {
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #1c1e21;
+    background: #f9fafb; /* Light gray modern background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-cause-page h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2a9d8f;
+    margin-bottom: 1.5rem;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.form-navigation button {
+    padding: 0.75rem 1.5rem;
+    background-color: #e76f51;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-navigation button:hover {
+    background-color: #f4a261;
+    transform: translateY(-2px);
+}

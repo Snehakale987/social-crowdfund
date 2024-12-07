@@ -1,0 +1,113 @@
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a9d8f;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+    color: #e76f51;
+}
+
+/* Hamburger Menu Icon */
+.navbar-hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-hamburger:hover {
+    color: #e76f51;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    /*flex-grow: 1;*/
+}
+
+.navbar-item {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: #e76f51;
+}
+
+/* User Dropdown Menu */
+.user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Login Button */
+.login-mobile {
+    display: block; /* Display Login button by default on desktop */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-hamburger {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #2a9d8f;
+        padding: 1rem 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .login-mobile {
+        display: none; /* Hide the Login button in desktop view */
+    }
+
+    .navbar-menu .login-mobile {
+        display: block; /* Show Login button in the hamburger menu on mobile */
+    }
+
+    .user-menu {
+        display: none; /* Hide UserDropdown on mobile */
+    }
+}

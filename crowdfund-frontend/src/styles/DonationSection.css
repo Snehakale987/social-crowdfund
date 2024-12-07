@@ -1,0 +1,147 @@
+/* Donation Section */
+.donation-section {
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow for a modern card effect */
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease; /* Smooth fade-in animation */
+}
+
+.donation-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2a9d8f; /* Highlighted teal heading */
+    margin-bottom: 1.5rem;
+}
+
+.donation-description {
+    font-size: 1rem;
+    color: #555555; /* Softer gray for readability */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Preset Buttons */
+.preset-amounts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Support wrapping for smaller screens */
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.preset-button {
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(90deg, #2a9d8f, #21867a); /* Gradient for modern button design */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+.preset-button:hover {
+    background: linear-gradient(90deg, #21867a, #1c6b63); /* Darker gradient on hover */
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+/* Custom Donation Input and Button */
+.custom-donation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.donation-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #f9fafc; /* Subtle background for input */
+}
+
+.donation-input:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    box-shadow: 0 0 6px rgba(42, 157, 143, 0.4);
+}
+
+/* Custom Donate Button */
+.custom-donate-button {
+    padding: 0.8rem 1.25rem;
+    background: linear-gradient(90deg, #e76f51, #f4a261); /* Eye-catching gradient */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+.custom-donate-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.custom-donate-button:hover:not(:disabled) {
+    background: linear-gradient(90deg, #d65c3b, #e68b45); /* Darker gradient on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Anonymous Checkbox */
+.donation-anonymous {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.donation-anonymous input {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-section {
+        padding: 1.5rem;
+    }
+
+    .preset-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .custom-donate-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

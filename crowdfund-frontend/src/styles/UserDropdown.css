@@ -1,0 +1,84 @@
+/* UserDropdown.css */
+
+/* UserDropdown Container */
+.user-dropdown {
+    position: relative;
+}
+
+/* User Avatar Button */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-avatar:hover {
+    background: #21867a;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    width: 220px; /* Ensure a consistent width */
+    text-align: left;
+    padding: 0.5rem;
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: anywhere; /* Ensure text breaks inside the box */
+}
+
+/* Dropdown Header */
+.dropdown-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.user-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #264653;
+    margin-bottom: 0.2rem;
+}
+
+.user-email {
+    font-size: 0.9rem;
+    color: #555555;
+    white-space: normal; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words if needed */
+    overflow-wrap: anywhere; /* Break words to fit the container */
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: #555;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: #f0f0f0;
+    color: #2a9d8f;
+}

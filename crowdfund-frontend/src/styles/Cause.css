@@ -1,0 +1,118 @@
+/* Cause Card */
+.cause-card {
+    min-width: 300px;
+    max-width: 300px;
+    height: 600px; /* Increased height */
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.cause-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Cause Image */
+.cause-image {
+    width: 100%;
+    height: 180px; /* Slightly increased image height */
+    object-fit: cover;
+}
+
+/* Cause Content */
+.cause-content {
+    flex-grow: 1;
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Cause Description */
+.cause-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    overflow: auto; /* Allow scrolling if content overflows */
+    max-height: 80px; /* Limit height for consistent layout */
+    -webkit-line-clamp: unset; /* Remove line clamping for longer descriptions */
+}
+
+/* Funding Info */
+.funding-info {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 0.2rem; /* Control vertical spacing */
+    text-align: center;
+    align-items: center;
+}
+
+.funds-raised {
+    color: #2a9d8f;
+    text-align: left; /* Align text properly */
+    margin: 0; /* Remove any default margins */
+    flex: 0 1 auto; /* Prevent uneven stretching */
+}
+
+.target-amount {
+    color: #e76f51;
+    text-align: left; /* Align text properly */
+    margin: 0; /* Remove any default margins */
+    flex: 0 1 auto; /* Prevent uneven stretching */
+}
+
+/* Progress Bar */
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.progress {
+    background: #2a9d8f;
+    height: 100%;
+    width: 50%; /* Dynamically set based on funding progress */
+    transition: width 0.3s ease;
+}
+
+/* Donate Button */
+.donate-now-button {
+    padding: 0.75rem 1.5rem;
+    background: #e76f51;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.donate-now-button:hover {
+    background: #f4a261;
+    transform: scale(1.05);
+}
+
+.days-left {
+    font-size: 1.2rem; /* Slightly larger font size for emphasis */
+    font-weight: bold;
+    color: white;
+    background: #e76f51; /* Vibrant attention-grabbing color */
+    padding: 0.5rem 1rem;
+    border-radius: 20px; /* Rounded badge style */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: inline-block; /* Make it adaptable to its content */
+    margin: 1rem auto 0 auto; /* Center it and add space above */
+}
+

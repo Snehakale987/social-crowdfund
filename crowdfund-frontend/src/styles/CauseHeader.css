@@ -1,0 +1,79 @@
+/* CauseHeader.css */
+.cause-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, #2a9d8f, #264653);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    margin-bottom: 1.5rem;
+}
+
+.cause-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cause-meta {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cause-creator {
+    font-style: italic;
+}
+
+.category-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Social Share Buttons */
+.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.share-button i {
+    font-size: 1.2rem;
+}
+
+.share-button.facebook {
+    background: #4267b2;
+    color: #ffffff;
+}
+
+.share-button.twitter {
+    background: #1da1f2;
+    color: #ffffff;
+}
+
+.share-button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
