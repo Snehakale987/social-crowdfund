@@ -63,7 +63,7 @@ function CreateCausePage() {
             });
 
             alert('Cause created successfully!');
-            navigate(`/cause/${response.data.id}`);
+            navigate(`/cause-details/${response.data.id}`);
         } catch (error) {
             console.error('Error creating cause:', error);
             alert('Failed to create cause. Please try again.');
