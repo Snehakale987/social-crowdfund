@@ -8,7 +8,7 @@ function UserCampaigns() {
     const [campaigns, setCampaigns] = useState({ created: [], donated: [] });
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/users/${id}`)
+        axios.get(`http://test-797390839.us-east-1.elb.amazonaws.com/api/users/${id}`)
             .then((response) => setCampaigns(response.data))
             .catch((error) => console.error('Error fetching user campaigns:', error));
     }, [id]);

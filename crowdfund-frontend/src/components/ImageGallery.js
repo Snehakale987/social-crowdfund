@@ -13,7 +13,7 @@ function ImageGallery({ images }) {
             {/* Selected Image Display */}
             <div className="selected-image-container">
                 <img
-                    src={`http://localhost:5000/${selectedImage}`}
+                    src={`http://test-797390839.us-east-1.elb.amazonaws.com/${selectedImage}`}
                     alt="Selected Cause"
                     className="selected-image"
                 />
@@ -24,7 +24,7 @@ function ImageGallery({ images }) {
                 {images.map((image, index) => (
                     <img
                         key={index}
-                        src={`http://localhost:5000/${image}`}
+                        src={`http://test-797390839.us-east-1.elb.amazonaws.com/${image}`}
                         alt={`Cause Thumbnail ${index + 1}`}
                         className={`thumbnail-image ${
                             selectedImage === image ? 'active' : ''

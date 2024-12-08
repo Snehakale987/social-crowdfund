@@ -11,7 +11,7 @@ function CategoriesSection() {
 
     useEffect(() => {
         axios
-            .get('http://localhost:5000/api/categories')
+            .get('http://test-797390839.us-east-1.elb.amazonaws.com/api/categories')
             .then((response) => {
                 setCategories(response.data);
                 setIsLoading(false); // Data fetched, stop loading

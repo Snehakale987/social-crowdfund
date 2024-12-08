@@ -11,7 +11,7 @@ function DonationSection({ causeId, onDonationUpdate,onNewDonor }) {
 
     const handleDonate = async (amount) => {
         try {
-            const response = await axios.post(`http://localhost:5000/api/causes/${causeId}/donate`, {
+            const response = await axios.post(`http://test-797390839.us-east-1.elb.amazonaws.com/api/causes/${causeId}/donate`, {
                 amount,
                 anonymous,
             }, {

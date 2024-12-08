@@ -55,7 +55,7 @@ function CreateCausePage() {
             });
 
             // Make API call to create the cause
-            const response = await axios.post('http://localhost:5000/api/causes/create', formData, {
+            const response = await axios.post('http://test-797390839.us-east-1.elb.amazonaws.com/api/causes/create', formData, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data',
