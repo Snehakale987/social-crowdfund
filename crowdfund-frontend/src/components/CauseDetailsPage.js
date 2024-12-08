@@ -20,10 +20,10 @@ function CauseDetailsPage() {
     useEffect(() => {
         const fetchCauseDetails = async () => {
             try {
-                const causeResponse = await axios.get(`http://test-797390839.us-east-1.elb.amazonaws.com/api/causes/${id}`);
+                const causeResponse = await axios.get(`http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/causes/${id}`);
                 setCause(causeResponse.data);
 
-                const donorsResponse = await axios.get(`http://test-797390839.us-east-1.elb.amazonaws.com/api/causes/${id}/donors`);
+                const donorsResponse = await axios.get(`http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/causes/${id}/donors`);
                 setDonors(donorsResponse.data); // Set donors data
 
                 setIsLoading(false);

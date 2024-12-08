@@ -14,7 +14,7 @@ function RegisterPage() {
         e.preventDefault();
 
         try {
-            await axios.post('http://test-797390839.us-east-1.elb.amazonaws.com/api/auth/register', {
+            await axios.post('http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/auth/register', {
                 name,
                 email,
                 password,

@@ -15,7 +15,7 @@ function CommentsSection({ causeId }) {
     useEffect(() => {
         const fetchComments = async () => {
             try {
-                const response = await axios.get(`http://test-797390839.us-east-1.elb.amazonaws.com/api/causes/${causeId}/comments`);
+                const response = await axios.get(`http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/causes/${causeId}/comments`);
                 setComments(response.data);
                 setLoading(false);
             } catch (err) {
@@ -38,7 +38,7 @@ function CommentsSection({ causeId }) {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                `http://test-797390839.us-east-1.elb.amazonaws.com/api/causes/${causeId}/comments`,
+                `http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/causes/${causeId}/comments`,
                 { text: newComment },
                 {
                     headers: {

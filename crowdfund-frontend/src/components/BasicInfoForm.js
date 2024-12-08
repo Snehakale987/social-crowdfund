@@ -22,7 +22,7 @@ function BasicInfoForm({ causeData, updateCauseData, nextStep }) {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await axios.get('http://test-797390839.us-east-1.elb.amazonaws.com/api/categories');
+                const response = await axios.get('http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/categories');
                 setCategories(response.data);
                 setIsLoading(false);
             } catch (error) {

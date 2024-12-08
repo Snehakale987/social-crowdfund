@@ -14,7 +14,7 @@ function TrendingCauses() {
     useEffect(() => {
         setIsLoading(true);
         axios
-            .get(`http://test-797390839.us-east-1.elb.amazonaws.com/api/causes/trending?page=${currentPage}&limit=${causesPerPage}`)
+            .get(`http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/causes/trending?page=${currentPage}&limit=${causesPerPage}`)
             .then((response) => {
                 setCauses(response.data.causes);
                 setTotalPages(response.data.totalPages);

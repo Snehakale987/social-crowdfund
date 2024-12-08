@@ -16,7 +16,7 @@ function LoginPage() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://test-797390839.us-east-1.elb.amazonaws.com/api/auth/login', {
+            const response = await axios.post('http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/auth/login', {
                 email,
                 password,
             });
