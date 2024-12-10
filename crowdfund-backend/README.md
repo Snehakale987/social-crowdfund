@@ -35,3 +35,37 @@ Fetch a paginated list of causes that are marked as trending.
        }
      ]
   }
+
+## Get User Donations (Protected)
+
+**Endpoint:** `GET /api/causes/my-donations`
+
+**Description:**  
+Retrieve a list of all donations made by the authenticated user.
+
+**Authentication:** Required.  
+You must include a valid JWT token in the `Authorization` header as `Bearer <token>`.
+
+**Response:**
+
+- **200 OK**  
+  Returns an array of donation objects populated with basic cause details.
+  ```json
+  [
+    {
+      "_id": "donation_id",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "amount": 50,
+      "anonymous": false,
+      "cause": {
+        "_id": "cause_id",
+        "title": "Cause Title",
+        "startDate": "2024-01-01T00:00:00Z",
+        "endDate": "2024-12-31T00:00:00Z",
+        "category": "category_name"
+      },
+      "date": "2024-10-10T00:00:00Z"
+    }
+  ]
+
