@@ -69,3 +69,95 @@ You must include a valid JWT token in the `Authorization` header as `Bearer <tok
     }
   ]
 
+## Get User's Created Causes (Protected)
+
+**Endpoint:** `GET /api/causes/my-causes`
+
+**Description:**  
+Retrieves a list of all causes created by the authenticated user.
+
+**Authentication:** Required.  
+You must include a valid JWT token in the `Authorization` header as `Bearer <token>`.
+
+**Response:**
+
+- **200 OK**  
+  Returns an array of cause objects.
+  ```json
+  [
+    {
+      "_id": "cause_id",
+      "title": "User Created Cause",
+      "category": "category_id",
+      "description": "Description of the cause",
+      "images": ["uploads/image1.jpg", "uploads/image2.jpg"],
+      "updates": [
+        { "text": "Initial update", "date": "2024-01-01T00:00:00Z" }
+      ],
+      "targetAmount": 5000,
+      "fundsRaised": 2500,
+      "progress": 50,
+      "startDate": "2024-01-01T00:00:00Z",
+      "endDate": "2024-12-31T00:00:00Z",
+      "creator": "user_id",
+      "isTrending": false
+    }
+  ]
+
+## Get Cause by ID
+
+**Endpoint:** `GET /api/causes/:id`
+
+**Description:**  
+Fetch the details of a specific cause by its ID.
+
+**URL Parameters:**
+- `id`: The unique identifier of the cause.
+
+**Authentication:** Not required.
+
+**Response:**
+
+- **200 OK**  
+  Returns the cause object with populated category, creator, and donor details.
+  ```json
+  {
+    "_id": "cause_id",
+    "title": "Cause Title",
+    "description": "Detailed description of the cause",
+    "category": {
+      "_id": "category_id",
+      "name": "Category Name"
+    },
+    "creator": {
+      "_id": "user_id",
+      "name": "Creator Name",
+      "email": "creator@example.com",
+      "image": "creator_image.jpg"
+    },
+    "images": ["uploads/image1.jpg", "uploads/image2.jpg"],
+    "updates": [
+      { "text": "Update message", "date": "2024-01-01T00:00:00Z" }
+    ],
+    "targetAmount": 10000,
+    "fundsRaised": 5000,
+    "progress": 50,
+    "startDate": "2024-01-01T00:00:00Z",
+    "endDate": "2024-12-31T00:00:00Z",
+    "donors": [
+      {
+        "user": {
+          "_id": "donor_user_id",
+          "name": "Donor Name",
+          "email": "donor@example.com",
+          "image": "donor_image.jpg"
+        },
+        "amount": 100,
+        "anonymous": false
+      }
+    ],
+    "comments": [
+      "comment_id_1",
+      "comment_id_2"
+    ]
+  }
