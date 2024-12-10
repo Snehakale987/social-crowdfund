@@ -17,6 +17,7 @@ const authenticateUser = async (req, res, next) => {
         }
 
         req.userId = decoded.userId;
+        req.userEmail = req.user._doc.email
 
         next(); // Proceed to the next middleware or route handler
     } catch (error) {

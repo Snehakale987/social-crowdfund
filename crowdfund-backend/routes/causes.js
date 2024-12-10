@@ -38,6 +38,29 @@ router.get('/trending', async (req, res) => {
     }
 });
 
+router.get('/my-donations', authenticateUser, async (req, res) => {
+    try {
+        console.log(req.userEmail)
+        const donations = await Donor.find({ email: req.userEmail }) // Match user's email in donors
+            .populate('cause', 'title startDate endDate category') // Populate cause details
+            .sort({ date: -1 });
+        res.status(200).json(donations);
+    } catch (error) {
+        console.error('Error fetching user donations:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+router.get('/my-causes', authenticateUser, async (req, res) => {
+    try {
+        const causes = await Cause.find({ creator: req.userId }).sort({ startDate: -1 });
+        res.status(200).json(causes);
+    } catch (error) {
+        console.error('Error fetching user causes:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
 // GET /api/causes/:id
 router.get('/:id', async (req, res) => {
     try {
