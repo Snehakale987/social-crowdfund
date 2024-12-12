@@ -13,7 +13,7 @@ function CausesPage() {
         const fetchCauses = async () => {
             try {
                 const response = await axios.get(
-                    `http://test-797390839.us-east-1.elb.amazonaws.com/:5000/api/causes?page=${currentPage}&limit=${causesPerPage}`
+                    `http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/causes?page=${currentPage}&limit=${causesPerPage}`
                 );
                 setCauses(response.data.causes);
                 setTotalPages(response.data.totalPages);
