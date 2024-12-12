@@ -52,7 +52,7 @@ function CategoriesSection() {
                     >
                         <picture className="category-picture">
                             <img
-                                src={`http://test-797390839.us-east-1.elb.amazonaws.com:5000/uploads/category/${category.image}.jpg`}
+                                src={`http://test-797390839.us-east-1.elb.amazonaws.com/uploads/category/${category.image}.jpg`}
                                 alt={category.name}
                                 className="category-image"
                             />
