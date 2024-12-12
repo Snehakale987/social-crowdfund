@@ -1,0 +1,50 @@
+/* CausesPage.css */
+.causes-page {
+    padding: 2rem;
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.causes-page h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.causes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #e0e0e0;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-button:hover {
+    background: #2a9d8f;
+    color: white;
+    transform: scale(1.05);
+}
+
+.pagination-button.active {
+    background: #264653;
+    color: white;
+    font-weight: bold;
+}

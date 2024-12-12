@@ -33,7 +33,7 @@ function UserDropdown() {
                     </div>
                     <button
                         className="dropdown-item"
-                        onClick={() => navigate('/profile')}
+                        onClick={() => navigate('/dashboard')}
                     >
                         Profile
                     </button>

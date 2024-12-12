@@ -52,6 +52,7 @@ function LoginPage() {
                     required
                 />
                 <button type="submit">Login</button>
+                <a onClick={() => navigate('/register')}>Don't have an account? Register</a>
             </form>
         </div>
     );

@@ -1,7 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/CauseHeader.css';
 
-function CauseHeader({ title, creatorName, category }) {
+function CauseHeader({ title, creatorName, category, creatorId, currentUserId, causeId }) {
+    const navigate = useNavigate();
+
+
     return (
         <header className="cause-header">
             <div className="header-content">

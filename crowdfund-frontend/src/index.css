@@ -9,7 +9,6 @@
   --text-color: #333333;
 }
 
-/* Global Styles */
 body {
   margin: 0;
   padding: 0;
@@ -27,13 +26,11 @@ a {
   color: inherit;
 }
 
-/* Responsive Images */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Box-sizing */
 *, *::before, *::after {
   box-sizing: border-box;
 }

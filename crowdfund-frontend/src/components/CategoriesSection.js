@@ -2,23 +2,25 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/CategoriesSection.css';
-import LoadingSpinner from './LoadingSpinner'; // Optional: If creating a separate spinner component
+import LoadingSpinner from './LoadingSpinner';
+import {useNavigate} from "react-router-dom";
 
 
 function CategoriesSection() {
     const [categories, setCategories] = useState([]);
-    const [isLoading, setIsLoading] = useState(true); // Add loading state
+    const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios
             .get('http://test-797390839.us-east-1.elb.amazonaws.com:5000/api/categories')
             .then((response) => {
                 setCategories(response.data);
-                setIsLoading(false); // Data fetched, stop loading
+                setIsLoading(false);
             })
             .catch((error) => {
                 console.error('Error fetching categories:', error);
-                setIsLoading(false); // Stop loading even if there's an error
+                setIsLoading(false);
             });
     }, []);
 
@@ -43,7 +45,7 @@ function CategoriesSection() {
                         key={category._id}
                         tabIndex="0"
                         role="button"
-                        onClick={() => console.log(`Clicked on ${category.name}`)}
+                        onClick={() => navigate(`/category/${category.id}`)}
                         onKeyPress={(e) => {
                             if (e.key === 'Enter') console.log(`Pressed Enter on ${category.name}`);
                         }}

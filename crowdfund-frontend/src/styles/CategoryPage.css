@@ -1,0 +1,22 @@
+/* CategoryPage.css */
+.category-page {
+    padding: 2rem;
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.causes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}

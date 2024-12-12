@@ -168,6 +168,10 @@
     color: #2a9d8f;
 }
 
+.form-card a{
+    cursor: pointer;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {

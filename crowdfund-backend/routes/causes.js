@@ -10,6 +10,25 @@ const upload = require('../utils/upload'); // Multer configuration
 const authenticateUser = require('../middleware/auth');
 
 
+
+router.get('/', async (req, res) => {
+    try {
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 6;
+        const skip = (page - 1) * limit;
+
+        const causes = await Cause.find().skip(skip).limit(limit);
+        const totalCauses = await Cause.countDocuments();
+
+        res.json({
+            causes,
+            totalPages: Math.ceil(totalCauses / limit),
+        });
+    } catch (err) {
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
 // GET /api/causes/trending
 router.get('/trending', async (req, res) => {
     const page = parseInt(req.query.page) || 1; // Default to page 1
