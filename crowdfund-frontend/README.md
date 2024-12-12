@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# CrowdFund : A Social Cause Crowdfunding Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+A platform that allows users to create and support social causes through donations. It integrates storytelling, transparency, and gamification to inspire action and build trust.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+### User Accounts
+* **Login/Signup**: Users can register or log in to the platform.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Authentication** : Uses JWT-based authentication.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Dashboard
+* **My Causes**: Displays causes created by the user.
 
-### `npm test`
+* **My Donations**: Lists causes the user has supported.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cause Management
+* **Create Cause**: Users can create a cause with the following:
 
-### `npm run build`
+    - **Basic Information**: Title, category, target amount, start & end dates.
+    - **Storytelling**: Description, image uploads, and updates.
+    - **Milestones/Updates**: Timeline-based updates for transparency.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Cause Details**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Sections:
+    - **Header**: Title, creator name, and category.
+    - **Image Gallery**: Displays uploaded images.
+    Progress Details: Visual progress bar and funding details.
+    - **Detailed Description**: Expandable story section.
+    - **Donation Section**: Preset and custom donation amounts.
+    - **Updates Timeline**: Chronological updates from the creator.
+    - **Comments Section**: Users can add comments to causes.
+    - **Donor List**: Displays the list of donors (anonymous or named).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Explore Causes**: View causes with filters (by category, more options coming in future versions) and sorting options.
 
-### `npm run eject`
+### Donation Management
+* Users can donate to causes using preset or custom amounts.
+* Donor details are tracked in the backend, including anonymity preferences.
+* Causes show the list of donors and their contributions (if not anonymous).
+* Transparency & Engagement
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **Progress Tracking**:
+    - Real-time funding progress.
+    - Timeline updates for milestones.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* **Social Sharing**: Share causes on social media with a single click.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Pages
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Home Page
 
-## Learn More
+* **Hero Section**: Highlights the platform’s purpose.
+**Categories Section**: Displays available categories.
+**Trending Causes**: Carousel of trending causes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Cause Details Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Comprehensive view of a cause with all relevant information and actions.
 
-### Code Splitting
+## Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Tabular views of:
 
-### Analyzing the Bundle Size
+* **My Causes**: Editable list of causes created by the user.
+* **My Donations**: Causes the user has supported.
+Includes filters and sorting.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Create Cause Page
 
-### Making a Progressive Web App
+**Multi-step form**:
+* Basic Info like Title, target amount, dates, and category dropdown.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Storytelling with upload images and write updates.
+Preview the cause before submission.
 
-### Advanced Configuration
+## Authentication Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Login Page**: JWT-based authentication for existing users.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Register Page**: Allows new users to create an account.
