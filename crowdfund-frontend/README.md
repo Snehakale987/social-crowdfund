@@ -31,3 +31,10 @@ Preview the cause before submission.
 **Login Page**: JWT-based authentication for existing users.
 
 **Register Page**: Allows new users to create an account.
+
+# How to run the frontend project
+
+* Clone the project
+* Run `npm install`
+* Run `npm start`
+* Go to `localhost:3000` to see the website
