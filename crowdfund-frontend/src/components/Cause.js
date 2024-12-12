@@ -13,7 +13,7 @@ function Cause({ cause }) {
     return (
         <div className="cause-card" onClick={handleCardClick} role="button" tabIndex={0}>
             <img
-                src={`/images/${cause.images[0]}`}
+                src={`http://test-797390839.us-east-1.elb.amazonaws.com/uploads/${cause.images[0]}`}
                 alt={cause.title}
                 className="cause-image"
             />
