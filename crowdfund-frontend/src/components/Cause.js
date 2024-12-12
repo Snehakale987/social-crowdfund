@@ -18,7 +18,7 @@ function Cause({ cause }) {
                 className="cause-image"
             />
             <div className="cause-content">
-                <h3 className="cause-title">{cause.title}</h3>
+                <h3 className="cause-card-title">{cause.title}</h3>
                 <p className="cause-description">{cause.description}</p>
                 <div className="days-left">
                     {cause.daysLeft} Days Left
